@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ballons Game</title>
+
+  <style>
+    .ballon {
+      width: 40px;
+      height: 50px;
+      margin: 50px;
+      position: absolute;
+      border-radius: 30px;
+      background-color: #000;
+    }
+
+    ;
+  </style>
+
+  <script src="js/script.js"></script>
+</head>
+
+<body onload="LoadGame()">
+
+  <h3 id="total"></h3>
+
+  <div style="flex-direction: row;">
+    <button onclick="LoadGame()">Start</button>
+    <button onclick="StopGame()">Stop</button>
+  </div>
+
+</body>
+
+</html>
