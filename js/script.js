@@ -1,9 +1,10 @@
 let total = 0;
+let ballon = null;
 let remove = null;
 let gameTimer = null;
 
 function createBallon() {
-  let ballon = document.createElement('div');
+  ballon = document.createElement('div');
 
   ballon.setAttribute('class', 'ballon');
 
