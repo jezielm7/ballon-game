@@ -1,5 +1,5 @@
 let total = 0;
-let remove = 0;
+let remove = null;
 let gameTimer = null;
 
 function createBallon() {
@@ -29,6 +29,8 @@ function toBurst(object) {
 
 function destroyBallon(object) {
   document.body.removeChild(object);
+
+  ballon--;
 };
 
 function LoadGame() {
