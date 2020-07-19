@@ -1,21 +1,20 @@
 let total = 0;
-let ballon = null;
+let balloon = null;
 let remove = null;
 let gameTimer = null;
 
 function createBallon() {
-  ballon = document.createElement('div');
+  balloon = document.createElement('div');
 
-  ballon.setAttribute('class', 'ballon');
+  balloon.setAttribute('class', 'balloon');
 
-  let x = Math.floor(Math.random() * 600);
-  let y = Math.floor(Math.random() * 400);
+  let x = Math.floor(Math.random() * 500);
+  let y = Math.floor(Math.random() * 350);
 
-  ballon.setAttribute('style', 'left:' + x + 'px; top:' + y + 'px;');
-  ballon.setAttribute('onclick', 'toBurst(this)');
-  ballon.setAttribute('onload', 'destroyBallon(this)');
+  balloon.setAttribute('style', 'left:' + x + 'px; top:' + y + 'px;');
+  balloon.setAttribute('onclick', 'toBurst(this)');
 
-  document.body.appendChild(ballon);
+  document.body.appendChild(balloon);
 };
 
 function toBurst(object) {
@@ -23,20 +22,13 @@ function toBurst(object) {
 
   total++;
 
-  let score = document.querySelector('#total');
+  let score = document.querySelector('#score');
 
   score.innerHTML = `Score: ${total}`;
 };
 
-function destroyBallon(object) {
-  document.body.removeChild(object);
-
-  ballon--;
-};
-
 function LoadGame() {
-  gameTimer = setInterval(createBallon, 1000);
-  remove = setInterval(destroyBallon, 5000);
+  gameTimer = setInterval(createBallon, 0500);
 };
 
 function StopGame() {
