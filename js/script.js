@@ -28,8 +28,13 @@ function toBurst(object) {
 };
 
 function LoadGame() {
-  gameTimer = setInterval(createBallon, 0500);
+  gameTimer = setInterval(createBallon, 1000);
+  
 };
+
+function removeBalloon() {
+  
+}
 
 function StopGame() {
   clearInterval(gameTimer);
